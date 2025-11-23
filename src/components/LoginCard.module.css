@@ -1,0 +1,90 @@
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 400px;
+}
+
+.tabs {
+    display: flex;
+    background: var(--secondary);
+    padding: 4px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.tab {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-light);
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.activeTab {
+    background: white;
+    color: var(--text-main);
+    box-shadow: var(--shadow-sm);
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.75rem;
+    background: #f9fafb;
+}
+
+.inputWrapper:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary);
+}
+
+.icon {
+    color: var(--text-light);
+    margin-right: 0.75rem;
+}
+
+.input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.signInBtn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-dark);
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.signInBtn:hover {
+    background-color: var(--primary);
+}
+
+.notice {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #fef2f2;
+    border: 1px solid #fee2e2;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    color: #b91c1c;
+    line-height: 1.4;
+}
