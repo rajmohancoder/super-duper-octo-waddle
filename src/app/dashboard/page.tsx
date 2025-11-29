@@ -3,6 +3,7 @@ import WelcomeSection from '@/components/dashboard/WelcomeSection';
 import AcademicPerformance from '@/components/dashboard/AcademicPerformance';
 import PersonalInformation from '@/components/dashboard/PersonalInformation';
 import Timetable from '@/components/dashboard/Timetable';
+import ExamsSchedule from '@/components/dashboard/ExamsSchedule';
 import Attendance from '@/components/dashboard/Attendance';
 import FeeDetails from '@/components/dashboard/FeeDetails';
 import styles from './dashboard.module.css';
@@ -16,6 +17,7 @@ export default function DashboardPage() {
                 <div className={styles.leftColumn}>
                     <AcademicPerformance />
                     <Timetable />
+                    <ExamsSchedule />
                 </div>
 
                 <div className={styles.rightColumn}>

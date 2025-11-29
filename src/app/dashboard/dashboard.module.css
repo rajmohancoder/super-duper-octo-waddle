@@ -323,6 +323,7 @@
 .infoLabel {
     color: #666;
     font-weight: 600;
+    width: 100px;
 }
 
 .infoValue {
@@ -461,5 +462,80 @@
 
     .mobileCloseBtn {
         display: block;
+    }
+}
+
+/* Exams Schedule */
+.tabsContainer {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tab {
+    background: none;
+    border: none;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.tab.active {
+    color: #ffc107;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffc107;
+}
+
+.examsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.examCard {
+    background-color: #f9f9f7;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.examSubject {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.examDate {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+
+.examScore {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffc107;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .examsGrid {
+        grid-template-columns: 1fr;
     }
 }
