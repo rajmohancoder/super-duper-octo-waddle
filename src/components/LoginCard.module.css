@@ -1,6 +1,11 @@
 .container {
     width: 100%;
     max-width: 400px;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
 }
 
 .header {
