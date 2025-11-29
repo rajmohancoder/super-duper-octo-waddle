@@ -8,29 +8,34 @@ export default function LoginCard() {
     const [activeTab, setActiveTab] = useState<'student' | 'school'>('student');
 
     return (
-        <div className={styles.card}>
+        <div className={styles.container}>
+            <div className={styles.header}>
+                <h1 className={styles.title}>Sign In</h1>
+                <p className={styles.subtitle}>Please enter your credentials to proceed.</p>
+            </div>
+
             <div className={styles.tabs}>
                 <button
                     className={`${styles.tab} ${activeTab === 'student' ? styles.activeTab : ''}`}
                     onClick={() => setActiveTab('student')}
                 >
-                    Student Login
+                    Student
                 </button>
                 <button
                     className={`${styles.tab} ${activeTab === 'school' ? styles.activeTab : ''}`}
                     onClick={() => setActiveTab('school')}
                 >
-                    School Login
+                    Teacher
                 </button>
             </div>
 
             <form onSubmit={(e) => e.preventDefault()}>
                 <div className={styles.formGroup}>
                     <div className={styles.inputWrapper}>
-                        <User size={18} className={styles.icon} />
+                        <User size={20} className={styles.icon} />
                         <input
                             type="text"
-                            placeholder="Login Id"
+                            placeholder="Login ID"
                             className={styles.input}
                         />
                     </div>
@@ -38,7 +43,7 @@ export default function LoginCard() {
 
                 <div className={styles.formGroup}>
                     <div className={styles.inputWrapper}>
-                        <Lock size={18} className={styles.icon} />
+                        <Lock size={20} className={styles.icon} />
                         <input
                             type="password"
                             placeholder="Password"
@@ -48,12 +53,19 @@ export default function LoginCard() {
                 </div>
 
                 <button type="submit" className={styles.signInBtn}>
-                    SIGN IN
+                    Sign In
                 </button>
             </form>
 
-            <div className={styles.notice}>
-                <strong>Important Notice:</strong> We are glad to share that all accounts have been migrated to newer version. For any clarification please contact your account manager.
+            <div className={styles.footer}>
+                <a href="/sign-up" className={styles.signupLink}>
+                    Don't have an account? Sign up now!
+                </a>
+            </div>
+
+            <div className={styles.adminContact}>
+                If you are facing any difficulties logging in, please contact the administrator at<br />
+                <strong>+91 884884884</strong> or <strong>+91 8833349421</strong> for assistance.
             </div>
         </div>
     );

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './CTA.module.css';
 
 export default function CTA() {
@@ -7,7 +8,9 @@ export default function CTA() {
             <p className={styles.subtext}>
                 Join hundreds of schools embracing a smarter, more connected way of managing day-to-day operations. Get started today.
             </p>
-            <button className={styles.button}>Get Started Now</button>
+            <Link href="/sign-up">
+                <button className={styles.button}>Get Started Now</button>
+            </Link>
         </section>
     );
 }

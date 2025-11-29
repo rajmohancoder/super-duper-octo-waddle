@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -24,6 +25,7 @@ export default function RootLayout({
       </head>
       <body className={`${raleway.variable}`}>
         {children}
+        <ScrollToTop />
       </body>
     </html>
   );

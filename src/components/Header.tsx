@@ -16,7 +16,9 @@ export default function Header() {
                     <li><Link href="/about" className={styles.link}>About Us</Link></li>
                     <li><Link href="/contact" className={styles.link}>Contact</Link></li>
                 </ul>
-                <button className={styles.cta}>Get Started</button>
+                <Link href="/sign-up">
+                    <button className={styles.cta}>Get Started</button>
+                </Link>
             </nav>
         </header>
     );
