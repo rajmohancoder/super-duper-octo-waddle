@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+  <!-- Top bar -->
+  <rect x="128" y="32" width="256" height="32" rx="16" ry="16"/>
+  
+  <!-- Arrow -->
+  <g>
+    <!-- Left arrow -->
+    <path d="M 144 208 L 256 96 L 368 208" stroke="currentColor" stroke-width="32" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Arrow stem -->
+    <line x1="256" y1="96" x2="256" y2="400" stroke="currentColor" stroke-width="32" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,9 +1,21 @@
+import Image from 'next/image';
 import LoginCard from './LoginCard';
 import styles from './Hero.module.css';
 
 export default function Hero() {
     return (
         <section className={styles.hero}>
+            <div className={styles.bgImage}>
+                <Image
+                    src="/hero-banner.jpg"
+                    alt="School Activities"
+                    fill
+                    priority
+                    style={{ objectFit: 'cover' }}
+                />
+                <div className={styles.overlay}></div>
+            </div>
+
             <div className={styles.content}>
                 <h1 className={styles.title}>
                     Streamline School Operations, Connect Your Community

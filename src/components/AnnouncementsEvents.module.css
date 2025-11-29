@@ -116,17 +116,58 @@
     color: var(--text-light);
 }
 
+.eventsContent {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.eventsList {
+    flex: 1;
+}
+
+.eventImageCarousel {
+    flex: 1;
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carouselSlide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}
+
+.carouselSlide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .viewCalendar {
     display: block;
     text-align: center;
     color: var(--primary);
     font-weight: 600;
-    margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+
+    .eventsContent {
+        flex-direction: column;
+    }
+
+    .eventImageCarousel {
+        height: 200px;
     }
 }

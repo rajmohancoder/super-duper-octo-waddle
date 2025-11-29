@@ -27,9 +27,20 @@
     text-align: left;
 }
 
+.featureLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .feature {
     display: flex;
     gap: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.featureLink:hover .feature {
+    transform: translateY(-5px);
 }
 
 .iconWrapper {

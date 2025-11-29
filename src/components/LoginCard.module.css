@@ -1,10 +1,28 @@
-.card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-lg);
+.container {
     width: 100%;
     max-width: 400px;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--text-light);
+    font-size: 0.95rem;
 }
 
 .tabs {
@@ -12,42 +30,42 @@
     background: var(--secondary);
     padding: 4px;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .tab {
     flex: 1;
-    padding: 0.5rem;
+    padding: 0.75rem;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-light);
     border-radius: 6px;
     transition: all 0.2s;
 }
 
 .activeTab {
-    background: white;
-    color: var(--text-main);
+    background: var(--primary);
+    color: white;
     box-shadow: var(--shadow-sm);
 }
 
 .formGroup {
-    margin-bottom: 1rem;
-    position: relative;
+    margin-bottom: 1.5rem;
 }
 
 .inputWrapper {
     display: flex;
     align-items: center;
     border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 0.75rem;
-    background: #f9fafb;
+    border-radius: 8px;
+    padding: 0.875rem;
+    background: white;
+    transition: all 0.2s;
 }
 
 .inputWrapper:focus-within {
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .icon {
@@ -60,31 +78,60 @@
     background: transparent;
     width: 100%;
     outline: none;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.input::placeholder {
+    color: #94a3b8;
 }
 
 .signInBtn {
     width: 100%;
-    padding: 0.75rem;
-    background-color: var(--primary-dark);
+    padding: 1rem;
+    background-color: var(--primary);
     color: white;
-    font-weight: 700;
-    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
     margin-top: 0.5rem;
-    transition: background-color 0.2s;
+    transition: all 0.2s;
+    cursor: pointer;
 }
 
 .signInBtn:hover {
-    background-color: var(--primary);
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
-.notice {
+.footer {
     margin-top: 1.5rem;
-    padding: 1rem;
-    background-color: #fef2f2;
-    border: 1px solid #fee2e2;
-    border-radius: 8px;
-    font-size: 0.75rem;
-    color: #b91c1c;
-    line-height: 1.4;
+    text-align: center;
+}
+
+.signupLink {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.signupLink:hover {
+    text-decoration: underline;
+}
+
+.adminContact {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.adminContact strong {
+    color: var(--text-main);
+    font-weight: 600;
 }
